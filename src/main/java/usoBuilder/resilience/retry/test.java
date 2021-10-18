@@ -24,6 +24,10 @@ public class test {
 		
 		r1.getConnection();
 		
+		Retry r2 = new Retry("pepe", "1111");
+		
+		r2.getConnection();
+		
 		
 	
 	

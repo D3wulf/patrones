@@ -19,25 +19,21 @@ public class Retry {
 	
 	public void getConnection() {
 		
+		++this.intentos;
 		if(this.USUARIO == this.nombre && this.PASS == this.pass) {
 			
 			System.out.println("Conexion correcta");
 		}else {
-			System.out.println("Conexion incorrecta");
+			System.out.println("Conexion incorrecta, intentos: " + this.intentos );
 			this.retry();
 		}
-		
-		
-		
 		
 	}
 	
 	
 	private void retry() {
 		
-		System.out.println("Entrando en el retry");
 		
-		++this.intentos;
 		
 		try {
 			//Delay de 1000
@@ -53,6 +49,7 @@ public class Retry {
 		while(this.intentos != this.MAX_INTENTOS) {
 			
 			System.out.println("Entrando en while");
+			
 			
 			this.getConnection();
 			

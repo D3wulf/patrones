@@ -2,18 +2,20 @@ package usoBuilder.prototype;
 
 public class Gijoe extends Cosa {
 	
+	String seccion;
+	
 	
 	public Gijoe(String nombre, String color, String tipo, String seccion) {
 		
-		super(nombre, color, tipo, seccion);
-		seccion= "Bazar";
+		super(nombre, color, tipo);
+		this.seccion= "Bazar";
 		
 		
 		
 	}
 	public Gijoe clone() {
 		
-		return new Gijoe(super.nombre, super.color,super.tipo, super.seccion);
+		return new Gijoe(super.nombre, super.color,super.tipo,this.seccion);
 		
 		
 	}
@@ -37,7 +39,7 @@ public class Gijoe extends Cosa {
 		this.tipo = tipo;
 */
 	public String getSeccion() {
-		return super.seccion;
+		return this.seccion;
 	}
 	public void setSeccion(String seccion) {
 		this.seccion = seccion;

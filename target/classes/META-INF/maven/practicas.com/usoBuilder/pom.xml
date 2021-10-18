@@ -4,4 +4,11 @@
   <artifactId>usoBuilder</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>usoBuilder</name>
+  <dependencies>
+  <dependency>
+    <groupId>io.github.resilience4j</groupId>
+    <artifactId>resilience4j-circuitbreaker</artifactId>
+    <version>0.10.1</version>
+</dependency>
+</dependencies>
 </project>

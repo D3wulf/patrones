@@ -17,8 +17,52 @@ public abstract class Cosa {
 	}
 	
 	
-	
+	//metodo abstracto
 	public abstract Cosa clone();
+
+
+
+	public String getNombre() {
+		return nombre;
+	}
+
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+
+	public String getColor() {
+		return color;
+	}
+
+
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+
+
+	public String getTipo() {
+		return tipo;
+	}
+
+
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Cosa [nombre=" + nombre + ", color=" + color + ", tipo=" + tipo + "]";
+	}
+	
+	
 	
 	/*
 	 * Circuit breaker: After a number of failed attempts, we can consider that the service is unavailable/overloaded and eagerly reject all subsequent requests to it

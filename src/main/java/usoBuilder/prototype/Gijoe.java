@@ -5,17 +5,17 @@ public class Gijoe extends Cosa {
 	String seccion;
 	
 	
-	public Gijoe(String nombre, String color, String tipo, String seccion) {
+	public Gijoe(String nombre, String color, String tipo) {
 		
 		super(nombre, color, tipo);
-		this.seccion= "Bazar";
+		this.seccion= "Jugueteria";
 		
 		
 		
 	}
-	public Gijoe clone() {
+	public Cosa clone() {
 		
-		return new Gijoe(super.nombre, super.color,super.tipo,this.seccion);
+		return new Gijoe(super.nombre, super.color,super.tipo);
 		
 		
 	}
@@ -44,4 +44,11 @@ public class Gijoe extends Cosa {
 	public void setSeccion(String seccion) {
 		this.seccion = seccion;
 	}
+	@Override
+	public String toString() {
+		return "Gijoe [seccion=" + seccion + ", nombre=" + nombre + ", color=" + color + ", tipo=" + tipo + "]";
+	}
+	
+	
+	
 }

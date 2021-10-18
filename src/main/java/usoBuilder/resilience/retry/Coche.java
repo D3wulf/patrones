@@ -29,14 +29,17 @@ public class Coche {
 	
 	
 	
+	
+	// Singleton
 	public static Coche getInstanceUnique(String nombre, String modelo, int ruedas) {
 		
 		if(Unico== null) {
 			Unico = new CocheBuilder().nombre(nombre).modelo(modelo).ruedas(ruedas).build();
-			System.out.println("Se ha creado una nueva instancia");
+			
+			System.out.println("Se ha creado una nueva instancia " + Unico.toString());
 		}else {
 			
-			System.out.println("ya hay un objeto creado");
+			System.out.println("ya hay un objeto creado con esos parámetros");
 		}
 		return Unico;
 		

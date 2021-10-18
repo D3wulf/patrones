@@ -12,10 +12,14 @@ public class test {
 		
 		*/
 		
+		
+		// Uso con Singleton
 		Coche c3 = Coche.getInstanceUnique("Focus", "Ford", 4);
-		System.out.println(c3);
+		
 		Coche c4 = Coche.getInstanceUnique("Focus", "Ford", 4);
 		System.out.println(c4);
+		
+		
 	
 	
 	}

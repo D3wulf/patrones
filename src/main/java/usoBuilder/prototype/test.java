@@ -1,16 +1,34 @@
 package usoBuilder.prototype;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class test {
 
 	public static void main(String[] args) {
 		
-		Gijoe g= new Gijoe("Juan", "azul", "juguete","bazar");
+		List<Cosa> cosas= new ArrayList<Cosa>();
+		
+		Cosa g= new Gijoe("Mercenario", "azul", "juguete");
 		
 
-		Gijoe g2 = g.clone();
-		Gijoe g3 = g.clone();
-		Gijoe g4 = g.clone();
-		Gijoe g5 = g.clone();
+		Cosa g2 = g.clone();
+		Cosa g3 = g.clone();
+		Cosa g4 = g.clone();
+		Cosa g5 = g.clone();
+		
+		cosas.add(g3);
+		cosas.add(g4);
+		cosas.add(g5);
+		
+		for(Cosa item: cosas) {
+			
+			System.out.println(item.toString());
+		}
+		
+		
+		
+		
 
 	}
 

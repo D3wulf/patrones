@@ -14,10 +14,15 @@ public class test {
 		
 		
 		// Uso con Singleton
+		/*
 		Coche c3 = Coche.getInstanceUnique("Focus", "Ford", 4);
 		
 		Coche c4 = Coche.getInstanceUnique("Focus", "Ford", 4);
 		System.out.println(c4);
+		*/
+		Retry r1= new Retry("pico","1111");
+		
+		r1.getConnection();
 		
 		
 	

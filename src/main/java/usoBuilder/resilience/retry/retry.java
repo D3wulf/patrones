@@ -8,28 +8,37 @@ public class retry {
 	private boolean conexion;
 	
 	
-	
-	
 	public retry() {
 		
-		++this.intentos;
-		
-		while(this.intentos != this.MAX_INTENTOS) {
-	
-			if(!this.conexion) { return;}
+		try {
+			//Delay de 1000
+			Thread.sleep(1000);
 			
-			else if (this.conexion) {
-				
-				System.out.println("Conectado con éxito");
-			}
 			
+		}catch (InterruptedException e) {
+			
+			e.printStackTrace(System.out);
 			
 		}
 			
+		++this.intentos;
+			
+			while(this.intentos != this.MAX_INTENTOS) {
+				
+				
+				//si le conexion sigue siendo erronea
+				if(!this.conexion) { return;} 
+				
+				else {
+					System.out.println("Conexion con éxito");
+					
+				}
+				
+				
+			}
 	}
-	
-	
-	
+		
+		
 	public int getIntentos() {
 		return intentos;
 	}
